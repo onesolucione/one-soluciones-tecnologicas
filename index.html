@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -22,56 +23,16 @@
           type="image/png"
           href="logo-one.png">
 
+
     <style>
 
         /* =====================================================
-           ONE - VERSION 2
-           IDENTIDAD: NEGRO / BLANCO / NARANJA
-           ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background: #080808;
-            color: #ffffff;
-
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        button,
-        a {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        /* =====================================================
-           VARIABLES CORPORATIVAS
-           ===================================================== */
+           ONE - SOLUCIONES TECNOLÓGICAS INTEGRALES
+           VERSION 2
+        ===================================================== */
 
         :root {
+
             --black: #080808;
             --black-soft: #0d0d0d;
             --black-card: #111111;
@@ -86,26 +47,104 @@
 
             --border: #242424;
             --border-light: #333333;
+
         }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                var(--black);
+
+            color:
+                var(--white);
+
+            line-height:
+                1.6;
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        a {
+
+            color:
+                inherit;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        img {
+
+            max-width:
+                100%;
+
+            display:
+                block;
+
+        }
+
 
         /* =====================================================
            CONTENEDOR
-           ===================================================== */
+        ===================================================== */
 
         .container {
-            width: min(1120px, 92%);
-            margin: 0 auto;
+
+            width:
+                min(1120px, 92%);
+
+            margin:
+                0 auto;
+
         }
+
 
         /* =====================================================
            HEADER
-           ===================================================== */
+        ===================================================== */
 
         header {
-            position: sticky;
-            top: 0;
 
-            z-index: 1000;
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                1000;
 
             background:
                 rgba(8, 8, 8, 0.94);
@@ -118,107 +157,165 @@
 
             -webkit-backdrop-filter:
                 blur(14px);
+
         }
+
 
         nav {
-            min-height: 82px;
 
-            display: flex;
+            min-height:
+                82px;
 
-            align-items: center;
+            display:
+                flex;
 
-            justify-content: space-between;
+            align-items:
+                center;
 
-            gap: 30px;
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
         }
 
+
         /* =====================================================
-           LOGO
-           ===================================================== */
+           LOGO OFICIAL
+        ===================================================== */
 
         .logo-link {
-            display: flex;
 
-            align-items: center;
+            display:
+                flex;
 
-            min-width: 190px;
+            align-items:
+                center;
+
+            flex-shrink:
+                0;
+
         }
+
 
         .logo-image {
-            width: 145px;
-            height: auto;
 
-            object-fit: contain;
+            width:
+                145px;
+
+            height:
+                auto;
+
+            object-fit:
+                contain;
+
         }
+
 
         /* =====================================================
-           NAVEGACION
-           ===================================================== */
+           NAVEGACIÓN
+        ===================================================== */
 
         .nav-links {
-            display: flex;
 
-            align-items: center;
+            display:
+                flex;
 
-            gap: 30px;
+            align-items:
+                center;
 
-            list-style: none;
+            gap:
+                30px;
 
-            font-size: 14px;
+            list-style:
+                none;
 
-            font-weight: 500;
+            font-size:
+                14px;
+
         }
+
 
         .nav-links a {
-            color: #bbbbbb;
+
+            position:
+                relative;
+
+            color:
+                #bbbbbb;
 
             transition:
-                color 0.3s ease,
-                transform 0.3s ease;
+                color 0.3s ease;
 
-            position: relative;
         }
 
+
         .nav-links a::after {
-            content: "";
 
-            position: absolute;
+            content:
+                "";
 
-            left: 0;
-            bottom: -8px;
+            position:
+                absolute;
 
-            width: 0;
-            height: 2px;
+            left:
+                0;
 
-            background: var(--orange);
+            bottom:
+                -8px;
+
+            width:
+                0;
+
+            height:
+                2px;
+
+            background:
+                var(--orange);
 
             transition:
                 width 0.3s ease;
+
         }
+
 
         .nav-links a:hover {
-            color: #ffffff;
+
+            color:
+                var(--white);
+
         }
 
+
         .nav-links a:hover::after {
-            width: 100%;
+
+            width:
+                100%;
+
         }
+
 
         /* =====================================================
            HERO
-           ===================================================== */
+        ===================================================== */
 
         .hero {
+
             min-height:
                 calc(100vh - 82px);
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            position: relative;
+            position:
+                relative;
 
-            overflow: hidden;
+            overflow:
+                hidden;
 
             background:
 
@@ -234,63 +331,101 @@
                     transparent 30%
                 ),
 
-                #080808;
+                var(--black);
+
         }
+
 
         .hero::before {
-            content: "";
 
-            position: absolute;
+            content:
+                "";
 
-            width: 420px;
-            height: 420px;
+            position:
+                absolute;
 
-            right: -180px;
-            top: 20%;
+            width:
+                450px;
 
-            border-radius: 50%;
+            height:
+                450px;
+
+            right:
+                -200px;
+
+            top:
+                15%;
+
+            border-radius:
+                50%;
 
             background:
-                rgba(255, 114, 0, 0.025);
+                rgba(255,114,0,0.035);
 
             filter:
-                blur(30px);
+                blur(60px);
 
-            pointer-events: none;
+            pointer-events:
+                none;
+
         }
 
+
         .hero-content {
-            max-width: 900px;
+
+            max-width:
+                900px;
 
             padding:
                 100px 0;
+
+            position:
+                relative;
+
+            z-index:
+                1;
+
         }
+
 
         /* =====================================================
            ETIQUETA HERO
-           ===================================================== */
+        ===================================================== */
 
         .eyebrow {
-            text-transform: uppercase;
 
-            letter-spacing: 5px;
+            text-transform:
+                uppercase;
 
-            color: #888888;
+            letter-spacing:
+                5px;
 
-            font-size: 12px;
+            color:
+                #888888;
 
-            margin-bottom: 25px;
+            font-size:
+                12px;
+
+            margin-bottom:
+                25px;
+
         }
+
 
         .eyebrow span {
-            color: var(--orange);
+
+            color:
+                var(--orange);
+
         }
 
+
         /* =====================================================
-           TITULO PRINCIPAL
-           ===================================================== */
+           TITULO
+        ===================================================== */
 
         h1 {
+
             font-size:
                 clamp(52px, 9vw, 96px);
 
@@ -305,23 +440,24 @@
 
             font-weight:
                 800;
+
         }
+
 
         h1 span {
+
             color:
-                #8d8d8d;
+                #888888;
+
         }
 
-        h1 .orange {
-            color:
-                var(--orange);
-        }
 
         /* =====================================================
-           TEXTO HERO
-           ===================================================== */
+           DESCRIPCIÓN HERO
+        ===================================================== */
 
         .hero-description {
+
             max-width:
                 700px;
 
@@ -336,13 +472,16 @@
 
             margin-bottom:
                 42px;
+
         }
+
 
         /* =====================================================
            BOTONES
-           ===================================================== */
+        ===================================================== */
 
         .buttons {
+
             display:
                 flex;
 
@@ -351,9 +490,12 @@
 
             gap:
                 14px;
+
         }
 
+
         .button {
+
             display:
                 inline-flex;
 
@@ -384,11 +526,11 @@
             transition:
                 all 0.3s ease;
 
-            cursor:
-                pointer;
         }
 
+
         .button.primary {
+
             background:
                 var(--orange);
 
@@ -400,10 +542,13 @@
 
             box-shadow:
                 0 10px 30px
-                rgba(255, 114, 0, 0.14);
+                rgba(255,114,0,0.14);
+
         }
 
+
         .button.primary:hover {
+
             background:
                 var(--orange-light);
 
@@ -413,20 +558,22 @@
             transform:
                 translateY(-3px);
 
-            box-shadow:
-                0 14px 35px
-                rgba(255, 114, 0, 0.20);
         }
 
+
         .button.secondary {
+
             background:
                 transparent;
 
             color:
                 #ffffff;
+
         }
 
+
         .button.secondary:hover {
+
             border-color:
                 var(--orange);
 
@@ -435,21 +582,27 @@
 
             transform:
                 translateY(-3px);
+
         }
+
 
         /* =====================================================
            SECCIONES
-           ===================================================== */
+        ===================================================== */
 
         section {
+
             padding:
                 110px 0;
 
             border-top:
                 1px solid #181818;
+
         }
 
+
         .section-label {
+
             color:
                 var(--orange);
 
@@ -467,9 +620,12 @@
 
             margin-bottom:
                 18px;
+
         }
 
+
         h2 {
+
             font-size:
                 clamp(36px, 5vw, 60px);
 
@@ -481,9 +637,12 @@
 
             margin-bottom:
                 28px;
+
         }
 
+
         .intro {
+
             max-width:
                 750px;
 
@@ -495,13 +654,16 @@
 
             line-height:
                 1.7;
+
         }
+
 
         /* =====================================================
            NOSOTROS
-           ===================================================== */
+        ===================================================== */
 
         .about-grid {
+
             display:
                 grid;
 
@@ -513,9 +675,12 @@
 
             align-items:
                 start;
+
         }
 
+
         .about-text p {
+
             color:
                 #aaaaaa;
 
@@ -527,9 +692,12 @@
 
             line-height:
                 1.75;
+
         }
 
+
         .about-highlight {
+
             margin-top:
                 35px;
 
@@ -547,31 +715,43 @@
 
             font-size:
                 15px;
+
         }
+
 
         /* =====================================================
            PRINCIPIOS
-           ===================================================== */
+        ===================================================== */
 
         .principles {
+
             border-left:
                 1px solid #333333;
 
             padding-left:
                 35px;
+
         }
+
 
         .principle {
+
             margin-bottom:
                 38px;
+
         }
+
 
         .principle:last-child {
+
             margin-bottom:
                 0;
+
         }
 
+
         .principle-number {
+
             color:
                 var(--orange);
 
@@ -586,17 +766,23 @@
 
             margin-bottom:
                 8px;
+
         }
 
+
         .principle h3 {
+
             font-size:
                 21px;
 
             margin-bottom:
                 8px;
+
         }
 
+
         .principle p {
+
             color:
                 #888888;
 
@@ -605,13 +791,16 @@
 
             line-height:
                 1.7;
+
         }
+
 
         /* =====================================================
            SERVICIOS
-           ===================================================== */
+        ===================================================== */
 
         .services {
+
             display:
                 grid;
 
@@ -623,39 +812,90 @@
 
             margin-top:
                 55px;
+
         }
 
+
         .service {
+
             padding:
                 30px;
 
             min-height:
-                230px;
+                220px;
 
             border:
                 1px solid #242424;
 
             background:
-                #0d0d0d;
+                linear-gradient(
+                    145deg,
+                    #111111,
+                    #0c0c0c
+                );
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
 
             transition:
-                border-color 0.3s ease,
-                transform 0.3s ease,
-                background 0.3s ease;
+                all 0.3s ease;
+
         }
 
-        .service:hover {
-            border-color:
-                rgba(255, 114, 0, 0.55);
+
+        .service::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            top:
+                0;
+
+            width:
+                3px;
+
+            height:
+                0;
 
             background:
-                #111111;
+                var(--orange);
+
+            transition:
+                height 0.3s ease;
+
+        }
+
+
+        .service:hover {
+
+            border-color:
+                rgba(255,114,0,0.55);
 
             transform:
                 translateY(-5px);
+
         }
 
+
+        .service:hover::before {
+
+            height:
+                100%;
+
+        }
+
+
         .service-number {
+
             color:
                 var(--orange);
 
@@ -670,17 +910,23 @@
 
             margin-bottom:
                 35px;
+
         }
 
+
         .service h3 {
+
             font-size:
                 20px;
 
             margin-bottom:
                 12px;
+
         }
 
+
         .service p {
+
             color:
                 #858585;
 
@@ -689,22 +935,24 @@
 
             line-height:
                 1.7;
+
         }
+
 
         /* =====================================================
            CTA
-           ===================================================== */
+        ===================================================== */
 
         .cta-section {
+
             background:
-                linear-gradient(
-                    135deg,
-                    #0b0b0b 0%,
-                    #101010 100%
-                );
+                #0a0a0a;
+
         }
 
+
         .cta-box {
+
             padding:
                 65px;
 
@@ -719,9 +967,12 @@
 
             overflow:
                 hidden;
+
         }
 
+
         .cta-box::after {
+
             content:
                 "";
 
@@ -744,24 +995,30 @@
                 50%;
 
             background:
-                rgba(255, 114, 0, 0.08);
+                rgba(255,114,0,0.08);
 
             filter:
-                blur(20px);
+                blur(25px);
 
             pointer-events:
                 none;
+
         }
 
-        .cta-box h2 {
-            max-width:
-                700px;
 
-            margin-bottom:
-                20px;
+        .cta-box > * {
+
+            position:
+                relative;
+
+            z-index:
+                1;
+
         }
+
 
         .cta-box p {
+
             max-width:
                 650px;
 
@@ -773,13 +1030,16 @@
 
             margin-bottom:
                 32px;
+
         }
+
 
         /* =====================================================
            CONTACTO
-           ===================================================== */
+        ===================================================== */
 
         .contact-grid {
+
             display:
                 grid;
 
@@ -791,9 +1051,12 @@
 
             margin-top:
                 45px;
+
         }
 
+
         .contact-card {
+
             padding:
                 35px;
 
@@ -805,17 +1068,23 @@
 
             transition:
                 all 0.3s ease;
+
         }
 
+
         .contact-card:hover {
+
             border-color:
-                rgba(255, 114, 0, 0.5);
+                rgba(255,114,0,0.5);
 
             transform:
                 translateY(-4px);
+
         }
 
+
         .contact-card-label {
+
             color:
                 var(--orange);
 
@@ -830,17 +1099,23 @@
 
             margin-bottom:
                 12px;
+
         }
 
+
         .contact-card h3 {
+
             font-size:
                 20px;
 
             margin-bottom:
                 8px;
+
         }
 
+
         .contact-card p {
+
             color:
                 #888888;
 
@@ -849,9 +1124,12 @@
 
             margin-bottom:
                 20px;
+
         }
 
+
         .contact-link {
+
             color:
                 #ffffff;
 
@@ -863,18 +1141,24 @@
 
             transition:
                 color 0.3s ease;
+
         }
 
+
         .contact-link:hover {
+
             color:
                 var(--orange);
+
         }
+
 
         /* =====================================================
            WHATSAPP FLOTANTE
-           ===================================================== */
+        ===================================================== */
 
         .whatsapp-float {
+
             position:
                 fixed;
 
@@ -885,19 +1169,16 @@
                 22px;
 
             width:
-                58px;
+                60px;
 
             height:
-                58px;
+                60px;
 
             border-radius:
                 50%;
 
             background:
                 #25D366;
-
-            color:
-                #ffffff;
 
             display:
                 flex;
@@ -911,35 +1192,44 @@
             z-index:
                 999;
 
-            font-size:
-                26px;
-
-            font-weight:
-                700;
-
             box-shadow:
-                0 8px 25px
-                rgba(0,0,0,0.35);
+                0 8px 30px
+                rgba(0,0,0,0.4);
 
             transition:
                 transform 0.3s ease;
+
         }
+
 
         .whatsapp-float:hover {
+
             transform:
                 scale(1.08);
+
         }
 
-        .whatsapp-icon {
-            font-family:
-                Arial, Helvetica, sans-serif;
+
+        .whatsapp-float svg {
+
+            width:
+                32px;
+
+            height:
+                32px;
+
+            fill:
+                #ffffff;
+
         }
+
 
         /* =====================================================
            FOOTER
-           ===================================================== */
+        ===================================================== */
 
         footer {
+
             padding:
                 55px 0;
 
@@ -951,9 +1241,12 @@
 
             font-size:
                 13px;
+
         }
 
+
         .footer-content {
+
             display:
                 flex;
 
@@ -968,9 +1261,12 @@
 
             flex-wrap:
                 wrap;
+
         }
 
+
         .footer-brand {
+
             color:
                 #ffffff;
 
@@ -981,10 +1277,13 @@
                 800;
 
             letter-spacing:
-                3px;
+                4px;
+
         }
 
+
         .footer-brand span {
+
             display:
                 block;
 
@@ -1002,41 +1301,56 @@
 
             margin-top:
                 4px;
+
         }
 
+
         .footer-copy {
+
             color:
                 #666666;
 
             text-align:
                 right;
+
         }
 
+
         /* =====================================================
-           RESPONSIVE - TABLET
-           ===================================================== */
+           RESPONSIVE TABLET
+        ===================================================== */
 
         @media (max-width: 900px) {
 
             .nav-links {
+
                 gap:
                     18px;
+
             }
+
 
             .services {
+
                 grid-template-columns:
                     repeat(2, 1fr);
+
             }
 
+
             .about-grid {
+
                 grid-template-columns:
                     1fr;
 
                 gap:
                     50px;
+
             }
 
+
             .principles {
+
                 border-left:
                     none;
 
@@ -1048,51 +1362,76 @@
 
                 padding-top:
                     35px;
+
             }
+
 
             .contact-grid {
+
                 grid-template-columns:
                     1fr;
+
             }
+
         }
 
+
         /* =====================================================
-           RESPONSIVE - TELEFONOS
-           ===================================================== */
+           RESPONSIVE MÓVIL
+        ===================================================== */
 
         @media (max-width: 700px) {
 
             header {
+
                 position:
                     relative;
+
             }
+
 
             nav {
+
                 min-height:
                     75px;
+
             }
+
 
             .logo-image {
+
                 width:
                     125px;
+
             }
+
 
             .nav-links {
+
                 display:
                     none;
+
             }
+
 
             .hero {
+
                 min-height:
                     auto;
+
             }
+
 
             .hero-content {
+
                 padding:
                     80px 0 90px;
+
             }
 
+
             .eyebrow {
+
                 font-size:
                     10px;
 
@@ -1101,118 +1440,172 @@
 
                 line-height:
                     1.8;
+
             }
 
+
             h1 {
+
                 font-size:
                     clamp(48px, 14vw, 70px);
 
                 letter-spacing:
                     -3px;
 
-                line-height:
-                    0.98;
             }
 
+
             .hero-description {
+
                 font-size:
                     17px;
 
                 line-height:
-                    1.65;
+                    1.7;
+
             }
 
+
             .buttons {
+
                 flex-direction:
                     column;
 
                 align-items:
                     stretch;
+
             }
+
 
             .button {
+
                 width:
                     100%;
+
             }
+
 
             section {
+
                 padding:
                     80px 0;
+
             }
 
+
             h2 {
+
                 font-size:
                     clamp(36px, 11vw, 52px);
 
                 letter-spacing:
                     -2px;
+
             }
+
 
             .intro {
+
                 font-size:
                     16px;
+
             }
 
+
             .services {
+
                 grid-template-columns:
                     1fr;
 
                 margin-top:
                     40px;
+
             }
+
 
             .service {
+
                 min-height:
                     auto;
+
             }
+
 
             .cta-box {
+
                 padding:
                     35px 25px;
+
             }
+
 
             .contact-card {
+
                 padding:
                     28px;
+
             }
 
+
             .footer-content {
+
                 align-items:
                     flex-start;
 
                 flex-direction:
                     column;
+
             }
+
 
             .footer-copy {
+
                 text-align:
                     left;
+
             }
 
+
             .whatsapp-float {
+
                 width:
-                    54px;
+                    56px;
 
                 height:
-                    54px;
+                    56px;
 
                 right:
                     17px;
 
                 bottom:
                     17px;
+
             }
+
+
+            .whatsapp-float svg {
+
+                width:
+                    30px;
+
+                height:
+                    30px;
+
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
 
-<!-- =========================================================
+
+<!-- =====================================================
      HEADER
-     ========================================================= -->
+===================================================== -->
 
 <header>
 
@@ -1220,9 +1613,10 @@
 
         <nav>
 
-            <a href="#inicio"
-               class="logo-link"
-               aria-label="ONE - Inicio">
+            <a
+                href="#inicio"
+                class="logo-link"
+                aria-label="ONE Soluciones Tecnológicas Integrales">
 
                 <img
                     src="logo-one.png"
@@ -1230,6 +1624,7 @@
                     class="logo-image">
 
             </a>
+
 
             <ul class="nav-links">
 
@@ -1266,16 +1661,16 @@
 </header>
 
 
-<!-- =========================================================
-     CONTENIDO PRINCIPAL
-     ========================================================= -->
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
 
 <main>
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+    <!-- =================================================
+         INICIO
+    ================================================== -->
 
     <section
         class="hero"
@@ -1285,7 +1680,9 @@
 
             <div class="hero-content">
 
+
                 <div class="eyebrow">
+
                     ONE
                     <span>·</span>
                     Tecnología
@@ -1293,23 +1690,33 @@
                     Conectividad
                     <span>·</span>
                     Soluciones
+
                 </div>
 
 
                 <h1>
-                    Tecnología<br>
-                    <span>sin límites.</span>
+
+                    Tecnología
+                    <br>
+
+                    <span>
+                        sin límites.
+                    </span>
+
                 </h1>
 
 
                 <p class="hero-description">
+
                     Soluciones tecnológicas integrales para personas,
                     hogares y empresas. Tecnología, conectividad,
                     seguridad, electrónica y soporte en un solo lugar.
+
                 </p>
 
 
                 <div class="buttons">
+
 
                     <a
                         href="#soluciones"
@@ -1328,6 +1735,7 @@
 
                     </a>
 
+
                 </div>
 
             </div>
@@ -1337,17 +1745,20 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =================================================
          NOSOTROS
-         ===================================================== -->
+    ================================================== -->
 
     <section
         id="nosotros">
 
         <div class="container">
 
+
             <div class="section-label">
+
                 01 · Nosotros
+
             </div>
 
 
@@ -1356,23 +1767,31 @@
 
                 <div class="about-text">
 
+
                     <h2>
-                        Una solución.<br>
+
+                        Una solución.
+                        <br>
                         Muchas posibilidades.
+
                     </h2>
 
 
                     <p>
-                        ONE Soluciones Tecnológicas Integrales nace con
-                        una visión: reunir diferentes áreas de la
+
+                        ONE Soluciones Tecnológicas Integrales nace
+                        con una visión: reunir diferentes áreas de la
                         tecnología bajo una misma propuesta.
+
                     </p>
 
 
                     <p>
+
                         Trabajamos para ofrecer soluciones prácticas,
                         profesionales y confiables en electrónica,
                         conectividad, seguridad, energía y tecnología.
+
                     </p>
 
 
@@ -1382,6 +1801,7 @@
                         necesidades reales.
 
                     </div>
+
 
                 </div>
 
@@ -1400,8 +1820,10 @@
                         </h3>
 
                         <p>
+
                             Conectamos diferentes áreas tecnológicas
                             para desarrollar soluciones completas.
+
                         </p>
 
                     </div>
@@ -1418,8 +1840,10 @@
                         </h3>
 
                         <p>
+
                             Incorporamos herramientas y tecnologías
                             actuales para resolver problemas reales.
+
                         </p>
 
                     </div>
@@ -1436,8 +1860,10 @@
                         </h3>
 
                         <p>
+
                             Servicio responsable, transparente y
                             orientado a resultados.
+
                         </p>
 
                     </div>
@@ -1452,37 +1878,43 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =================================================
          SOLUCIONES
-         ===================================================== -->
+    ================================================== -->
 
     <section
         id="soluciones">
 
         <div class="container">
 
+
             <div class="section-label">
+
                 02 · Soluciones
+
             </div>
 
 
             <h2>
-                Tecnología para<br>
+
+                Tecnología para
+                <br>
                 diferentes necesidades.
+
             </h2>
 
 
             <p class="intro">
+
                 Ofrecemos soluciones tecnológicas orientadas a
                 personas, hogares y empresas, combinando servicio
                 técnico, instalación, mantenimiento y tecnología.
+
             </p>
 
 
             <div class="services">
 
-
-                <!-- 01 -->
 
                 <article class="service">
 
@@ -1495,14 +1927,14 @@
                     </h3>
 
                     <p>
+
                         Diagnóstico, reparación y mantenimiento
                         de equipos electrónicos.
+
                     </p>
 
                 </article>
 
-
-                <!-- 02 -->
 
                 <article class="service">
 
@@ -1515,14 +1947,14 @@
                     </h3>
 
                     <p>
+
                         Servicio técnico y reparación de televisores,
                         pantallas LED y equipos relacionados.
+
                     </p>
 
                 </article>
 
-
-                <!-- 03 -->
 
                 <article class="service">
 
@@ -1535,14 +1967,14 @@
                     </h3>
 
                     <p>
+
                         Mantenimiento, reparación y soporte para
                         computadoras y equipos tecnológicos.
+
                     </p>
 
                 </article>
 
-
-                <!-- 04 -->
 
                 <article class="service">
 
@@ -1555,14 +1987,14 @@
                     </h3>
 
                     <p>
+
                         Instalación y configuración de redes,
                         Wi-Fi, routers y soluciones de conectividad.
+
                     </p>
 
                 </article>
 
-
-                <!-- 05 -->
 
                 <article class="service">
 
@@ -1575,14 +2007,14 @@
                     </h3>
 
                     <p>
+
                         Instalación y mantenimiento de cámaras,
                         sistemas CCTV y soluciones de seguridad.
+
                     </p>
 
                 </article>
 
-
-                <!-- 06 -->
 
                 <article class="service">
 
@@ -1595,14 +2027,14 @@
                     </h3>
 
                     <p>
+
                         Soluciones tecnológicas para protección,
                         detección y seguridad de espacios.
+
                     </p>
 
                 </article>
 
-
-                <!-- 07 -->
 
                 <article class="service">
 
@@ -1615,14 +2047,14 @@
                     </h3>
 
                     <p>
+
                         Instalación, configuración y soporte para
                         sistemas de televisión digital y satelital.
+
                     </p>
 
                 </article>
 
-
-                <!-- 08 -->
 
                 <article class="service">
 
@@ -1635,14 +2067,14 @@
                     </h3>
 
                     <p>
+
                         Soluciones de energía solar para diferentes
                         necesidades residenciales y tecnológicas.
+
                     </p>
 
                 </article>
 
-
-                <!-- 09 -->
 
                 <article class="service">
 
@@ -1655,14 +2087,14 @@
                     </h3>
 
                     <p>
+
                         Automatización y control tecnológico
                         para hogares y espacios.
+
                     </p>
 
                 </article>
 
-
-                <!-- 10 -->
 
                 <article class="service">
 
@@ -1675,14 +2107,14 @@
                     </h3>
 
                     <p>
+
                         Soluciones para recuperación y gestión
                         de información digital.
+
                     </p>
 
                 </article>
 
-
-                <!-- 11 -->
 
                 <article class="service">
 
@@ -1695,14 +2127,14 @@
                     </h3>
 
                     <p>
+
                         Instalaciones y soluciones eléctricas
                         para proyectos residenciales y tecnológicos.
+
                     </p>
 
                 </article>
 
-
-                <!-- 12 -->
 
                 <article class="service">
 
@@ -1715,8 +2147,10 @@
                     </h3>
 
                     <p>
+
                         Asesoría, mantenimiento y soporte para
                         diferentes necesidades tecnológicas.
+
                     </p>
 
                 </article>
@@ -1729,39 +2163,49 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =================================================
          CTA
-         ===================================================== -->
+    ================================================== -->
 
     <section
         class="cta-section">
 
         <div class="container">
 
+
             <div class="cta-box">
 
+
                 <div class="section-label">
+
                     Tecnología integrada
+
                 </div>
 
 
                 <h2>
-                    Una solución.<br>
+
+                    Una solución.
+                    <br>
                     Todo conectado.
+
                 </h2>
 
 
                 <p>
+
                     Cuéntanos qué necesitas y encontremos juntos
                     una solución tecnológica adecuada para tu
                     proyecto, hogar o empresa.
+
                 </p>
 
 
                 <div class="buttons">
 
+
                     <a
-                        href="https://wa.me/50586288360"
+                        href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
                         class="button primary"
                         target="_blank"
                         rel="noopener">
@@ -1779,7 +2223,9 @@
 
                     </a>
 
+
                 </div>
+
 
             </div>
 
@@ -1788,29 +2234,37 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =================================================
          CONTACTO
-         ===================================================== -->
+    ================================================== -->
 
     <section
         id="contacto">
 
         <div class="container">
 
+
             <div class="section-label">
+
                 03 · Contacto
+
             </div>
 
 
             <h2>
-                Hablemos de<br>
+
+                Hablemos de
+                <br>
                 tu solución.
+
             </h2>
 
 
             <p class="intro">
+
                 Estamos disponibles para conocer tus necesidades
                 y orientarte sobre la solución tecnológica adecuada.
+
             </p>
 
 
@@ -1821,21 +2275,31 @@
 
                 <div class="contact-card">
 
+
                     <div class="contact-card-label">
+
                         WhatsApp
+
                     </div>
 
+
                     <h3>
+
                         Atención directa
+
                     </h3>
 
+
                     <p>
+
                         Comunícate directamente con ONE para
                         realizar consultas o solicitar información.
+
                     </p>
 
+
                     <a
-                        href="https://wa.me/50586288360"
+                        href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
                         class="contact-link"
                         target="_blank"
                         rel="noopener">
@@ -1844,6 +2308,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -1851,18 +2316,28 @@
 
                 <div class="contact-card">
 
+
                     <div class="contact-card-label">
+
                         Correo electrónico
+
                     </div>
 
+
                     <h3>
+
                         Contacto ONE
+
                     </h3>
 
+
                     <p>
+
                         También puedes escribirnos directamente
                         por correo electrónico.
+
                     </p>
+
 
                     <a
                         href="mailto:onenetwork.glob@gmail.com"
@@ -1871,6 +2346,7 @@
                         onenetwork.glob@gmail.com →
 
                     </a>
+
 
                 </div>
 
@@ -1885,31 +2361,37 @@
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHATSAPP FLOTANTE
-     ========================================================= -->
+===================================================== -->
 
 <a
-    href="https://wa.me/50586288360"
+    href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
     class="whatsapp-float"
     aria-label="Contactar a ONE por WhatsApp"
     target="_blank"
     rel="noopener">
 
-    <span class="whatsapp-icon">
-        WA
-    </span>
+
+    <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true">
+
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.44-8.43ZM12.07 21.8h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98.99-3.64-.23-.37a9.87 9.87 0 0 1-1.51-5.28C2.17 6.45 6.61 2 12.07 2c2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 0 1 2.89 7c0 5.46-4.44 9.9-9.87 9.9Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
+    </svg>
 
 </a>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-     ========================================================= -->
+===================================================== -->
 
 <footer>
 
     <div class="container">
+
 
         <div class="footer-content">
 
@@ -1943,4 +2425,5 @@
 
 
 </body>
-                        </html>
+
+</html>
