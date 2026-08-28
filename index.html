@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ONE Soluciones Tecnológicas Integrales</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="ONE Soluciones Tecnológicas Integrales. Tecnología, conectividad y soluciones para personas, hogares y empresas.">
+    <title>ONE | Soluciones Tecnológicas Integrales</title>
 
-    <meta name="theme-color" content="#080808">
+    <meta name="description"
+          content="ONE Soluciones Tecnológicas Integrales. Tecnología, conectividad, seguridad, electrónica y soporte para personas, hogares y empresas.">
+
+    <meta name="theme-color"
+          content="#080808">
 
     <style>
 
-        /* =========================
-           CONFIGURACIÓN GENERAL
-        ========================== */
+        /* =========================================================
+           ONE SOLUCIONES TECNOLÓGICAS INTEGRALES
+           INDEX V3.2
+           ========================================================= */
+
+        :root {
+            --black: #080808;
+            --black-soft: #0d0d0d;
+            --black-card: #101010;
+
+            --white: #ffffff;
+            --gray-light: #cccccc;
+            --gray: #999999;
+            --gray-dark: #666666;
+
+            --border: #252525;
+            --border-light: #333333;
+
+            --orange: #ff7a00;
+            --orange-dark: #d96100;
+
+            --max-width: 1120px;
+        }
+
+
+        /* =========================================================
+           RESET
+           ========================================================= */
 
         * {
             margin: 0;
@@ -22,326 +52,597 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: #ffffff;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--black);
+            color: var(--white);
+
             line-height: 1.6;
+
+            overflow-x: hidden;
         }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
-        .container {
-            width: min(1120px, 92%);
-            margin: auto;
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
         }
 
 
-        /* =========================
-           ENCABEZADO / LOGO
-        ========================== */
+        .container {
+            width: min(var(--max-width), 92%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           HEADER / LOGO
+           ========================================================= */
 
         header {
             position: sticky;
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(8, 8, 8, 0.96);
+            background:
+                rgba(8, 8, 8, 0.94);
 
-            border-bottom: 1px solid #222;
+            border-bottom:
+                1px solid var(--border);
 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
         }
 
-        nav {
-            min-height: 145px;
+
+        .header-inner {
+            min-height: 150px;
 
             display: flex;
+            flex-direction: column;
+
             align-items: center;
             justify-content: center;
+
+            gap: 8px;
 
             padding: 18px 0;
         }
 
+
         .brand {
             display: flex;
             flex-direction: column;
+
             align-items: center;
             justify-content: center;
 
             text-align: center;
         }
 
+
         .brand-logo {
-            width: 210px;
+            width: 230px;
+            max-width: 75vw;
+
             height: auto;
 
-            display: block;
-
-            margin-bottom: 10px;
+            object-fit: contain;
         }
 
+
         .brand-tagline {
-            font-size: 11px;
+            margin-top: 8px;
 
-            letter-spacing: 3px;
+            color: var(--gray);
 
-            color: #999999;
+            font-size: 12px;
+
+            letter-spacing: 5px;
 
             text-transform: uppercase;
 
-            white-space: nowrap;
+            font-weight: 400;
         }
 
 
-        /* =========================
-           HERO
-        ========================== */
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
 
-        .hero {
-            min-height: calc(100vh - 145px);
+        nav {
+            width: 100%;
 
             display: flex;
+            justify-content: center;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 28px;
+
+            list-style: none;
+
+            font-size: 13px;
+        }
+
+
+        .nav-links a {
+            color: var(--gray-light);
+
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--orange);
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            min-height:
+                calc(100vh - 150px);
+
+            display: flex;
+
             align-items: center;
 
             position: relative;
+
             overflow: hidden;
 
+            border-bottom:
+                1px solid var(--border);
+
             background:
+
+                radial-gradient(
+                    circle at 82% 30%,
+                    rgba(255, 122, 0, 0.07),
+                    transparent 26%
+                ),
+
                 radial-gradient(
                     circle at 80% 30%,
-                    rgba(255,255,255,0.08),
-                    transparent 30%
+                    rgba(255,255,255,0.07),
+                    transparent 32%
                 ),
 
                 radial-gradient(
-                    circle at 20% 80%,
-                    rgba(255,255,255,0.04),
+                    circle at 15% 80%,
+                    rgba(255,255,255,0.035),
                     transparent 30%
                 ),
 
-                #080808;
+                var(--black);
         }
+
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            right: -220px;
+            bottom: -220px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 122, 0, 0.035);
+
+            filter:
+                blur(50px);
+
+            pointer-events: none;
+        }
+
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
 
-            padding: 90px 0;
+            padding:
+                100px 0;
         }
+
 
         .eyebrow {
             text-transform: uppercase;
 
-            letter-spacing: 4px;
+            letter-spacing: 5px;
 
-            color: #999999;
+            color: var(--gray);
 
-            font-size: 13px;
+            font-size: 12px;
 
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+
+            font-weight: 500;
         }
+
+
+        .eyebrow .accent {
+            color: var(--orange);
+        }
+
 
         h1 {
-            font-size: clamp(48px, 9vw, 92px);
+            font-size:
+                clamp(52px, 9vw, 96px);
 
-            line-height: 0.98;
+            line-height: 0.96;
 
-            letter-spacing: -4px;
+            letter-spacing: -5px;
 
-            margin-bottom: 30px;
-        }
+            margin-bottom: 34px;
 
-        h1 span {
-            color: #aaaaaa;
-        }
-
-        .hero p {
-            max-width: 700px;
-
-            color: #bbbbbb;
-
-            font-size: 20px;
-
-            margin-bottom: 40px;
+            font-weight: 800;
         }
 
 
-        /* =========================
-           BOTONES
-        ========================== */
+        h1 .gray {
+            color: #aaa;
+        }
+
+
+        h1 .orange {
+            color: var(--orange);
+        }
+
+
+        .hero-description {
+            max-width: 720px;
+
+            color: var(--gray-light);
+
+            font-size:
+                clamp(17px, 2.2vw, 21px);
+
+            line-height: 1.65;
+
+            margin-bottom: 42px;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+           ========================================================= */
 
         .buttons {
             display: flex;
 
             flex-wrap: wrap;
 
-            gap: 15px;
+            gap: 14px;
         }
+
 
         .button {
-            display: inline-block;
+            display: inline-flex;
 
-            padding: 14px 24px;
+            align-items: center;
+            justify-content: center;
 
-            border: 1px solid #444444;
+            min-height: 54px;
 
-            border-radius: 4px;
+            padding:
+                14px 28px;
 
-            font-weight: 600;
+            border:
+                1px solid var(--border-light);
 
-            transition: 0.3s;
+            border-radius: 5px;
 
-            cursor: pointer;
+            font-weight: 700;
+
+            font-size: 15px;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease,
+                box-shadow 0.25s ease;
         }
+
 
         .button.primary {
-            background: #ffffff;
+            background: var(--white);
 
-            color: #000000;
+            color: #000;
 
-            border-color: #ffffff;
+            border-color: var(--white);
         }
 
-        .button:hover {
-            transform: translateY(-2px);
-
-            border-color: #777777;
-        }
 
         .button.primary:hover {
-            background: #eeeeee;
+            background: var(--orange);
+
+            color: #000;
+
+            border-color: var(--orange);
+
+            box-shadow:
+                0 8px 30px
+                rgba(255, 122, 0, 0.18);
         }
 
 
-        /* =========================
-           SECCIONES
-        ========================== */
+        .button.secondary {
+            background: transparent;
+
+            color: var(--white);
+        }
+
+
+        .button.secondary:hover {
+            border-color: var(--orange);
+
+            color: var(--orange);
+        }
+
+
+        .button:hover {
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================================================
+           SECTIONS
+           ========================================================= */
 
         section {
-            padding: 100px 0;
+            padding: 110px 0;
 
-            border-top: 1px solid #181818;
+            border-top:
+                1px solid var(--border);
         }
 
+
         .section-label {
-            color: #777777;
+            color: var(--orange);
 
             text-transform: uppercase;
 
-            letter-spacing: 3px;
+            letter-spacing: 4px;
 
-            font-size: 12px;
+            font-size: 11px;
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+
+            font-weight: 600;
         }
+
+
+        .section-label .dot {
+            color: var(--orange);
+        }
+
 
         h2 {
-            font-size: clamp(34px, 5vw, 56px);
+            font-size:
+                clamp(38px, 5.5vw, 62px);
 
-            line-height: 1.05;
+            line-height: 1.03;
 
-            margin-bottom: 25px;
+            letter-spacing: -2px;
+
+            margin-bottom: 28px;
+
+            font-weight: 800;
         }
+
 
         .intro {
-            max-width: 720px;
+            max-width: 750px;
 
-            color: #aaaaaa;
+            color: var(--gray);
 
             font-size: 18px;
+
+            line-height: 1.7;
         }
 
 
-        /* =========================
-           NOSOTROS
-        ========================== */
+        /* =========================================================
+           ABOUT
+           ========================================================= */
 
         .about-grid {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
-            gap: 70px;
+            gap: 80px;
 
             align-items: start;
+
+            margin-top: 20px;
         }
+
 
         .about-text p {
-            color: #aaaaaa;
+            color: var(--gray-light);
 
-            margin-bottom: 20px;
+            margin-bottom: 22px;
 
             font-size: 17px;
+
+            line-height: 1.8;
         }
+
 
         .principles {
-            border-left: 1px solid #333333;
+            border-left:
+                2px solid var(--orange);
 
-            padding-left: 30px;
+            padding-left: 32px;
         }
+
 
         .principle {
-            margin-bottom: 30px;
+            margin-bottom: 34px;
         }
+
+
+        .principle:last-child {
+            margin-bottom: 0;
+        }
+
 
         .principle h3 {
-            margin-bottom: 5px;
+            font-size: 21px;
+
+            margin-bottom: 8px;
         }
+
 
         .principle p {
-            color: #888888;
+            color: var(--gray);
 
             font-size: 14px;
+
+            line-height: 1.7;
         }
 
 
-        /* =========================
-           SERVICIOS
-        ========================== */
+        /* =========================================================
+           SERVICES
+           ========================================================= */
 
         .services {
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
             gap: 15px;
 
-            margin-top: 50px;
+            margin-top: 55px;
         }
+
 
         .service {
+            position: relative;
+
             padding: 30px;
 
-            min-height: 190px;
+            min-height: 215px;
 
-            border: 1px solid #242424;
+            border:
+                1px solid var(--border);
 
-            background: #0d0d0d;
+            background:
+                linear-gradient(
+                    145deg,
+                    #111111,
+                    #0b0b0b
+                );
 
-            transition: 0.3s;
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
         }
+
+
+        .service::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 0;
+            height: 2px;
+
+            background:
+                var(--orange);
+
+            transition:
+                width 0.3s ease;
+        }
+
 
         .service:hover {
-            border-color: #555555;
+            transform:
+                translateY(-5px);
 
-            transform: translateY(-4px);
+            border-color:
+                #3d3d3d;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #141414,
+                    #0d0d0d
+                );
         }
+
+
+        .service:hover::before {
+            width: 100%;
+        }
+
 
         .service-number {
-            color: #666666;
+            color: var(--orange);
 
-            font-size: 13px;
+            font-size: 12px;
 
-            margin-bottom: 35px;
+            letter-spacing: 2px;
+
+            margin-bottom: 42px;
+
+            font-weight: 600;
         }
+
 
         .service h3 {
             font-size: 20px;
@@ -349,154 +650,175 @@
             margin-bottom: 10px;
         }
 
+
         .service p {
-            color: #888888;
+            color: var(--gray);
 
             font-size: 14px;
+
+            line-height: 1.65;
         }
 
 
-        /* =========================
-           CONTACTO
-        ========================== */
+        /* =========================================================
+           CONTACT
+           ========================================================= */
 
-        .contact-box {
-            margin-top: 40px;
+        .contact-intro {
+            max-width: 700px;
 
-            padding: 50px;
+            color: var(--gray);
 
-            border: 1px solid #292929;
+            font-size: 18px;
 
-            background: #0d0d0d;
+            line-height: 1.7;
+
+            margin-bottom: 42px;
         }
 
-        .contact-box p {
-            color: #999999;
 
-            margin-bottom: 30px;
-        }
-
-        .contact-options {
+        .contact-grid {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             gap: 15px;
 
-            margin-top: 30px;
+            margin-top: 40px;
         }
+
 
         .contact-card {
-            padding: 30px;
+            position: relative;
 
-            border: 1px solid #292929;
+            padding: 45px;
 
-            background: #0b0b0b;
+            border:
+                1px solid var(--border);
 
-            transition: 0.3s;
+            background:
+                #0c0c0c;
+
+            min-height: 280px;
+
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease;
         }
+
+
+        .contact-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 55px;
+            height: 2px;
+
+            background:
+                var(--orange);
+        }
+
 
         .contact-card:hover {
-            border-color: #555555;
+            border-color:
+                #444;
 
-            transform: translateY(-3px);
+            transform:
+                translateY(-3px);
         }
 
+
         .contact-label {
-            color: #f57c00;
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
+            color: var(--orange);
 
             font-size: 11px;
 
-            margin-bottom: 18px;
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 25px;
         }
+
 
         .contact-card h3 {
-            font-size: 22px;
+            font-size: 27px;
 
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+
 
         .contact-card p {
-            color: #888888;
+            color: var(--gray);
 
-            font-size: 15px;
+            font-size: 16px;
 
-            margin-bottom: 20px;
+            line-height: 1.7;
+
+            margin-bottom: 28px;
         }
+
 
         .contact-link {
-            font-weight: 600;
-
-            color: #ffffff;
-
-            word-break: break-word;
-        }
-
-
-        /* =========================
-           WHATSAPP FLOTANTE
-        ========================== */
-
-        .whatsapp-float {
-            position: fixed;
-
-            right: 25px;
-            bottom: 25px;
-
-            width: 64px;
-            height: 64px;
-
-            background: #25D366;
-
-            border-radius: 50%;
-
-            display: flex;
+            display: inline-flex;
 
             align-items: center;
-            justify-content: center;
 
-            z-index: 2000;
+            gap: 8px;
 
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.45);
+            color: var(--white);
 
-            transition: 0.3s;
-        }
+            font-size: 18px;
 
-        .whatsapp-float:hover {
-            transform: scale(1.08);
-        }
+            font-weight: 700;
 
-        .whatsapp-float svg {
-            width: 38px;
-            height: 38px;
-
-            fill: #ffffff;
+            transition:
+                color 0.25s ease;
         }
 
 
-        /* =========================
+        .contact-link:hover {
+            color: var(--orange);
+        }
+
+
+        .arrow {
+            color: var(--orange);
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .contact-link:hover .arrow {
+            transform:
+                translateX(5px);
+        }
+
+
+        /* =========================================================
            FOOTER
-        ========================== */
+           ========================================================= */
 
         footer {
-            padding: 55px 0;
+            padding:
+                65px 0 45px;
 
-            border-top: 1px solid #222222;
-
-            color: #777777;
-
-            font-size: 13px;
+            border-top:
+                1px solid var(--border);
         }
+
 
         .footer-content {
             display: flex;
 
-            justify-content: space-between;
+            justify-content:
+                space-between;
 
             align-items: flex-end;
 
@@ -504,6 +826,7 @@
 
             flex-wrap: wrap;
         }
+
 
         .footer-brand {
             display: flex;
@@ -513,630 +836,1095 @@
             gap: 8px;
         }
 
-        .footer-brand strong {
-            font-size: 24px;
 
-            letter-spacing: 6px;
+        .footer-one {
+            font-size: 28px;
 
-            color: #ffffff;
+            font-weight: 800;
+
+            letter-spacing: 7px;
         }
+
 
         .footer-tagline {
-            color: #777777;
+            color: var(--gray-dark);
 
-            letter-spacing: 2px;
+            font-size: 12px;
+
+            letter-spacing: 3px;
 
             text-transform: uppercase;
-
-            font-size: 10px;
         }
 
-        .copyright {
-            color: #666666;
+
+        .footer-copy {
+            color: var(--gray-dark);
+
+            font-size: 12px;
 
             text-align: right;
         }
 
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
+        /* =========================================================
+           WHATSAPP FLOATING BUTTON
+           ========================================================= */
 
-        @media (max-width: 800px) {
+        .whatsapp-float {
+            position: fixed;
 
-            header {
-                position: sticky;
+            right: 28px;
+            bottom: 28px;
+
+            z-index: 2000;
+
+            width: 66px;
+            height: 66px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                #25D366;
+
+            box-shadow:
+                0 10px 35px
+                rgba(0,0,0,0.45);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .whatsapp-float:hover {
+            transform:
+                translateY(-4px)
+                scale(1.04);
+
+            box-shadow:
+                0 15px 40px
+                rgba(37,211,102,0.22);
+        }
+
+
+        .whatsapp-icon {
+            width: 35px;
+            height: 35px;
+
+            fill: #ffffff;
+        }
+
+
+        /* =========================================================
+           SCROLL INDICATOR
+           ========================================================= */
+
+        .hero-bottom-line {
+            position: absolute;
+
+            left: 50%;
+            bottom: 28px;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--gray-dark);
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+        }
+
+
+        .hero-bottom-line::before {
+            content: "";
+
+            width: 30px;
+            height: 1px;
+
+            background:
+                var(--orange);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE TABLET
+           ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .services {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            nav {
-                min-height: 125px;
 
-                padding: 15px 0;
+            .about-grid {
+                gap: 45px;
             }
+
+
+            .contact-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE MOBILE
+           ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                min-height: 130px;
+
+                padding:
+                    16px 0 14px;
+            }
+
 
             .brand-logo {
-                width: 175px;
+                width: 205px;
             }
+
 
             .brand-tagline {
                 font-size: 9px;
 
-                letter-spacing: 2.2px;
+                letter-spacing: 3.5px;
             }
+
+
+            .nav-links {
+                gap: 17px;
+
+                font-size: 11px;
+            }
+
 
             .hero {
-                min-height: calc(100vh - 125px);
+                min-height:
+                    calc(100vh - 130px);
             }
+
 
             .hero-content {
-                padding: 70px 0;
+                padding:
+                    75px 0 90px;
             }
+
+
+            .eyebrow {
+                font-size: 10px;
+
+                letter-spacing: 3px;
+
+                line-height: 2;
+            }
+
 
             h1 {
-                font-size: clamp(48px, 14vw, 72px);
+                font-size:
+                    clamp(48px, 14vw, 72px);
 
-                letter-spacing: -2px;
+                letter-spacing:
+                    -3px;
+
+                margin-bottom: 28px;
             }
 
-            .hero p {
+
+            .hero-description {
                 font-size: 17px;
+
+                line-height: 1.65;
             }
 
-            section {
-                padding: 75px 0;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-            .contact-box {
-                padding: 30px;
-            }
-
-            .contact-options {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-card {
-                padding: 25px;
-            }
 
             .buttons {
                 flex-direction: column;
 
-                align-items: stretch;
-            }
-
-            .button {
-                text-align: center;
-
                 width: 100%;
             }
 
-            .whatsapp-float {
-                width: 60px;
-                height: 60px;
 
-                right: 18px;
-                bottom: 18px;
+            .button {
+                width: 100%;
             }
 
-            .whatsapp-float svg {
-                width: 35px;
-                height: 35px;
+
+            section {
+                padding:
+                    80px 0;
             }
+
+
+            h2 {
+                font-size:
+                    clamp(36px, 11vw, 52px);
+            }
+
+
+            .about-grid {
+                grid-template-columns:
+                    1fr;
+
+                gap: 45px;
+            }
+
+
+            .about-text p {
+                font-size: 16px;
+            }
+
+
+            .services {
+                grid-template-columns:
+                    1fr;
+
+                gap: 12px;
+
+                margin-top: 40px;
+            }
+
+
+            .service {
+                min-height: 190px;
+
+                padding: 28px;
+            }
+
+
+            .service-number {
+                margin-bottom: 32px;
+            }
+
+
+            .contact-card {
+                padding: 32px;
+
+                min-height: 250px;
+            }
+
+
+            .contact-card h3 {
+                font-size: 24px;
+            }
+
+
+            .contact-link {
+                font-size: 16px;
+            }
+
 
             .footer-content {
-                flex-direction: column;
+                align-items:
+                    flex-start;
 
-                align-items: flex-start;
+                flex-direction:
+                    column;
             }
 
-            .copyright {
-                text-align: left;
+
+            .footer-copy {
+                text-align:
+                    left;
             }
+
+
+            .whatsapp-float {
+                width: 62px;
+                height: 62px;
+
+                right: 20px;
+                bottom: 20px;
+            }
+
+
+            .whatsapp-icon {
+                width: 33px;
+                height: 33px;
+            }
+
+
+            .hero-bottom-line {
+                display: none;
+            }
+
         }
 
+
+        /* =========================================================
+           MOBILE PEQUEÑO
+           ========================================================= */
+
+        @media (max-width: 390px) {
+
+            .brand-logo {
+                width: 180px;
+            }
+
+
+            .brand-tagline {
+                font-size: 8px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .nav-links {
+                gap: 12px;
+
+                font-size: 10px;
+            }
+
+
+            .hero-content {
+                padding-top:
+                    65px;
+            }
+
+
+            h1 {
+                font-size:
+                    47px;
+            }
+
+        }
+
+
     </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     ENCABEZADO
-========================== -->
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
 
-<header>
-
-    <div class="container">
-
-        <nav>
-
-            <a href="#inicio" class="brand">
-
-                <img
-                    src="logo-one.png"
-                    alt="ONE Soluciones Tecnológicas Integrales"
-                    class="brand-logo"
-                >
-
-                <div class="brand-tagline">
-                    SOLUCIONES TECNOLÓGICAS INTEGRALES
-                </div>
-
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =========================
-     CONTENIDO PRINCIPAL
-========================== -->
-
-<main>
-
-
-    <!-- =========================
-         INICIO
-    ========================== -->
-
-    <section class="hero" id="inicio">
+    <header>
 
         <div class="container">
 
-            <div class="hero-content">
+            <div class="header-inner">
 
-                <div class="eyebrow">
-                    ONE · Tecnología · Conectividad · Soluciones
+                <a
+                    href="#inicio"
+                    class="brand"
+                    aria-label="ONE Soluciones Tecnológicas Integrales"
+                >
+
+                    <img
+                        src="logo-one.png"
+                        alt="ONE Soluciones Tecnológicas Integrales"
+                        class="brand-logo"
+                    >
+
+                    <span class="brand-tagline">
+                        Soluciones Tecnológicas Integrales
+                    </span>
+
+                </a>
+
+
+                <nav aria-label="Navegación principal">
+
+                    <ul class="nav-links">
+
+                        <li>
+                            <a href="#inicio">
+                                Inicio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#nosotros">
+                                Nosotros
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#soluciones">
+                                Soluciones
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contacto">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="container">
+
+                <div class="hero-content">
+
+
+                    <div class="eyebrow">
+
+                        <span class="accent">ONE</span>
+                        · Tecnología
+                        <span class="accent">·</span>
+                        Conectividad
+                        <span class="accent">·</span>
+                        Soluciones
+
+                    </div>
+
+
+                    <h1>
+
+                        Tecnología<br>
+
+                        <span class="gray">
+                            sin límites
+                        </span><span class="orange">.</span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Soluciones tecnológicas integrales para
+                        personas, hogares y empresas.
+                        Tecnología, conectividad, seguridad,
+                        electrónica y soporte en un solo lugar.
+
+                    </p>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="#soluciones"
+                            class="button primary"
+                        >
+                            Conoce nuestras soluciones
+                        </a>
+
+
+                        <a
+                            href="#contacto"
+                            class="button secondary"
+                        >
+                            Contactarnos
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-bottom-line">
+                Explora ONE
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NOSOTROS
+             ===================================================== -->
+
+        <section id="nosotros">
+
+            <div class="container">
+
+
+                <div class="section-label">
+
+                    01
+                    <span class="dot">·</span>
+                    Nosotros
+
                 </div>
 
 
-                <h1>
-                    Tecnología<br>
-                    <span>sin límites.</span>
-                </h1>
+                <div class="about-grid">
 
 
-                <p>
-                    Soluciones tecnológicas integrales para personas,
-                    hogares y empresas. Tecnología, conectividad,
-                    seguridad, electrónica y soporte en un solo lugar.
+                    <div class="about-text">
+
+                        <h2>
+
+                            Una solución.<br>
+
+                            <span class="gray">
+                                Muchas posibilidades
+                            </span><span class="orange">.</span>
+
+                        </h2>
+
+
+                        <p>
+
+                            ONE Soluciones Tecnológicas Integrales
+                            nace con una visión clara: reunir
+                            diferentes áreas de la tecnología
+                            bajo una misma propuesta.
+
+                        </p>
+
+
+                        <p>
+
+                            Trabajamos para ofrecer soluciones
+                            prácticas, profesionales y accesibles
+                            para personas, hogares y empresas.
+
+                        </p>
+
+
+                        <p>
+
+                            Desde electrónica y soporte técnico
+                            hasta conectividad, seguridad,
+                            energía y automatización.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="principles">
+
+
+                        <div class="principle">
+
+                            <h3>
+                                Integración
+                            </h3>
+
+                            <p>
+
+                                Conectamos diferentes tecnologías
+                                para crear soluciones completas
+                                y funcionales.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <h3>
+                                Innovación
+                            </h3>
+
+                            <p>
+
+                                Incorporamos nuevas herramientas
+                                y tecnologías para resolver
+                                necesidades reales.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <h3>
+                                Confianza
+                            </h3>
+
+                            <p>
+
+                                Servicio responsable, transparente
+                                y orientado a resultados.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SOLUCIONES
+             ===================================================== -->
+
+        <section id="soluciones">
+
+            <div class="container">
+
+
+                <div class="section-label">
+
+                    02
+                    <span class="dot">·</span>
+                    Soluciones
+
+                </div>
+
+
+                <h2>
+
+                    Tecnología para<br>
+
+                    <span class="gray">
+                        diferentes necesidades
+                    </span><span class="orange">.</span>
+
+                </h2>
+
+
+                <p class="intro">
+
+                    Nuestro objetivo es ofrecer soluciones
+                    prácticas, profesionales y accesibles
+                    en diferentes áreas tecnológicas.
+
                 </p>
 
 
-                <div class="buttons">
 
-                    <a
-                        href="#soluciones"
-                        class="button primary"
-                    >
-                        Conoce nuestras soluciones
-                    </a>
+                <div class="services">
 
 
-                    <a
-                        href="#contacto"
-                        class="button"
-                    >
-                        Contactarnos
-                    </a>
+                    <!-- 01 -->
 
-                </div>
+                    <article class="service">
 
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         NOSOTROS
-    ========================== -->
-
-    <section id="nosotros">
-
-        <div class="container">
-
-            <div class="section-label">
-                01 · Nosotros
-            </div>
-
-
-            <div class="about-grid">
-
-
-                <div class="about-text">
-
-                    <h2>
-                        Una solución.<br>
-                        Muchas posibilidades.
-                    </h2>
-
-
-                    <p>
-                        ONE Soluciones Tecnológicas Integrales nace con
-                        una visión: reunir diferentes áreas de la
-                        tecnología bajo una misma propuesta.
-                    </p>
-
-
-                    <p>
-                        Desde electrónica y reparación de equipos hasta
-                        conectividad, seguridad, energía y soluciones
-                        tecnológicas para hogares y empresas.
-                    </p>
-
-                </div>
-
-
-
-                <div class="principles">
-
-
-                    <div class="principle">
+                        <div class="service-number">
+                            01
+                        </div>
 
                         <h3>
-                            Integración
+                            Electrónica
                         </h3>
 
                         <p>
-                            Conectamos diferentes tecnologías para crear
-                            soluciones completas.
+
+                            Diagnóstico, reparación y
+                            mantenimiento de equipos
+                            electrónicos.
+
                         </p>
 
-                    </div>
+                    </article>
 
 
-                    <div class="principle">
+
+                    <!-- 02 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            02
+                        </div>
 
                         <h3>
-                            Innovación
+                            Televisores y pantallas
                         </h3>
 
                         <p>
-                            Buscamos nuevas herramientas y tecnologías
-                            para resolver problemas reales.
+
+                            Servicio técnico y reparación
+                            de televisores, pantallas LED
+                            y equipos relacionados.
+
                         </p>
 
-                    </div>
+                    </article>
 
 
-                    <div class="principle">
+
+                    <!-- 03 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            03
+                        </div>
 
                         <h3>
-                            Confianza
+                            Computación
                         </h3>
 
                         <p>
-                            Servicio responsable, transparente y
-                            orientado a resultados.
+
+                            Mantenimiento, reparación y
+                            soporte para equipos
+                            informáticos.
+
                         </p>
 
-                    </div>
+                    </article>
+
+
+
+                    <!-- 04 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Redes y conectividad
+                        </h3>
+
+                        <p>
+
+                            Instalación y configuración
+                            de redes, Wi-Fi y soluciones
+                            de conectividad.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 05 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Seguridad
+                        </h3>
+
+                        <p>
+
+                            CCTV, cámaras, alarmas y
+                            soluciones de seguridad
+                            tecnológica.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 06 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Energía y automatización
+                        </h3>
+
+                        <p>
+
+                            Soluciones de energía solar,
+                            domótica e instalaciones
+                            tecnológicas.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 07 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            07
+                        </div>
+
+                        <h3>
+                            TV y satélite
+                        </h3>
+
+                        <p>
+
+                            Instalación y soporte para
+                            sistemas TDT, satelitales
+                            y recepción de señal.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 08 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            08
+                        </div>
+
+                        <h3>
+                            Recuperación de datos
+                        </h3>
+
+                        <p>
+
+                            Soluciones para recuperación
+                            y gestión de información
+                            digital.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 09 -->
+
+                    <article class="service">
+
+                        <div class="service-number">
+                            09
+                        </div>
+
+                        <h3>
+                            Soluciones empresariales
+                        </h3>
+
+                        <p>
+
+                            Tecnología aplicada a las
+                            necesidades de pequeños
+                            negocios y empresas.
+
+                        </p>
+
+                    </article>
 
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!-- =========================
-         SOLUCIONES
-    ========================== -->
+        <!-- =====================================================
+             CONTACTO
+             ===================================================== -->
 
-    <section id="soluciones">
+        <section id="contacto">
+
+            <div class="container">
+
+
+                <div class="section-label">
+
+                    03
+                    <span class="dot">·</span>
+                    Contacto
+
+                </div>
+
+
+                <h2>
+
+                    Hablemos de<br>
+
+                    <span class="gray">
+                        tu solución
+                    </span><span class="orange">.</span>
+
+                </h2>
+
+
+                <p class="contact-intro">
+
+                    Estamos disponibles para conocer tus
+                    necesidades y orientarte sobre la solución
+                    tecnológica adecuada.
+
+                </p>
+
+
+
+                <div class="contact-grid">
+
+
+                    <!-- WHATSAPP -->
+
+                    <div class="contact-card">
+
+                        <div class="contact-label">
+                            WhatsApp
+                        </div>
+
+
+                        <h3>
+                            Atención directa
+                        </h3>
+
+
+                        <p>
+
+                            Comunícate directamente con ONE
+                            para realizar consultas o
+                            solicitar información.
+
+                        </p>
+
+
+                        <a
+                            href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
+                            class="contact-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            +505 8628 8360
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- CORREO -->
+
+                    <div class="contact-card">
+
+                        <div class="contact-label">
+                            Correo electrónico
+                        </div>
+
+
+                        <h3>
+                            Contacto ONE
+                        </h3>
+
+
+                        <p>
+
+                            También puedes escribirnos
+                            directamente por correo
+                            electrónico.
+
+                        </p>
+
+
+                        <a
+                            href="mailto:onenetwork.glob@gmail.com"
+                            class="contact-link"
+                        >
+
+                            onenetwork.glob@gmail.com
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
 
         <div class="container">
 
-            <div class="section-label">
-                02 · Soluciones
-            </div>
+            <div class="footer-content">
 
 
-            <h2>
-                Tecnología para<br>
-                diferentes necesidades.
-            </h2>
+                <div class="footer-brand">
 
-
-            <p class="intro">
-                Nuestro objetivo es ofrecer soluciones prácticas,
-                profesionales y accesibles en diferentes áreas
-                tecnológicas.
-            </p>
-
-
-
-            <div class="services">
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        01
+                    <div class="footer-one">
+                        ONE
                     </div>
 
-                    <h3>
-                        Electrónica
-                    </h3>
-
-                    <p>
-                        Diagnóstico, reparación y mantenimiento de
-                        equipos electrónicos.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        02
+                    <div class="footer-tagline">
+                        Soluciones Tecnológicas Integrales
                     </div>
-
-                    <h3>
-                        Televisores y pantallas
-                    </h3>
-
-                    <p>
-                        Servicio técnico y reparación de televisores,
-                        pantallas LED y equipos relacionados.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Computación
-                    </h3>
-
-                    <p>
-                        Mantenimiento, reparación y soporte para
-                        equipos informáticos.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Redes y conectividad
-                    </h3>
-
-                    <p>
-                        Instalación y configuración de redes, Wi-Fi y
-                        soluciones de conectividad.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        05
-                    </div>
-
-                    <h3>
-                        Seguridad
-                    </h3>
-
-                    <p>
-                        CCTV, cámaras, alarmas y soluciones de
-                        seguridad tecnológica.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        06
-                    </div>
-
-                    <h3>
-                        Energía y automatización
-                    </h3>
-
-                    <p>
-                        Soluciones de energía solar, domótica e
-                        instalaciones tecnológicas.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        07
-                    </div>
-
-                    <h3>
-                        TV y satélite
-                    </h3>
-
-                    <p>
-                        Instalación y soporte para sistemas TDT,
-                        satelitales y recepción de señal.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        08
-                    </div>
-
-                    <h3>
-                        Recuperación de datos
-                    </h3>
-
-                    <p>
-                        Soluciones para recuperación y gestión de
-                        información digital.
-                    </p>
-
-                </article>
-
-
-
-                <article class="service">
-
-                    <div class="service-number">
-                        09
-                    </div>
-
-                    <h3>
-                        Soluciones empresariales
-                    </h3>
-
-                    <p>
-                        Tecnología aplicada a las necesidades de
-                        pequeños negocios y empresas.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACTO
-    ========================== -->
-
-    <section id="contacto">
-
-        <div class="container">
-
-            <div class="section-label">
-                03 · Contacto
-            </div>
-
-
-            <h2>
-                Hablemos de<br>
-                tu solución.
-            </h2>
-
-
-            <p class="intro">
-                Estamos disponibles para conocer tus necesidades y
-                orientarte sobre la solución tecnológica adecuada.
-            </p>
-
-
-
-            <div class="contact-options">
-
-
-                <!-- WHATSAPP -->
-
-                <div class="contact-card">
-
-                    <div class="contact-label">
-                        WhatsApp
-                    </div>
-
-
-                    <h3>
-                        Atención directa
-                    </h3>
-
-
-                    <p>
-                        Comunícate directamente con ONE para realizar
-                        consultas o solicitar información.
-                    </p>
-
-
-                    <a
-                        href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
-                        class="contact-link"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        +505 8628 8360 →
-                    </a>
 
                 </div>
 
 
+                <div class="footer-copy">
 
-                <!-- CORREO -->
-
-                <div class="contact-card">
-
-                    <div class="contact-label">
-                        Correo electrónico
-                    </div>
-
-
-                    <h3>
-                        Contacto ONE
-                    </h3>
-
-
-                    <p>
-                        También puedes escribirnos directamente por
-                        correo electrónico.
-                    </p>
-
-
-                    <a
-                        href="mailto:onenetwork.glob@gmail.com"
-                        class="contact-link"
-                    >
-                        onenetwork.glob@gmail.com →
-                    </a>
+                    © 2026 ONE.
+                    Todos los derechos reservados.
 
                 </div>
 
@@ -1145,76 +1933,40 @@
 
         </div>
 
-    </section>
-
-
-</main>
+    </footer>
 
 
 
-<!-- =========================
-     FOOTER
-========================== -->
+    <!-- =========================================================
+         WHATSAPP FLOTANTE
+         ========================================================= -->
 
-<footer>
-
-    <div class="container">
-
-        <div class="footer-content">
-
-
-            <div class="footer-brand">
-
-                <strong>
-                    ONE
-                </strong>
-
-                <div class="footer-tagline">
-                    Soluciones Tecnológicas Integrales
-                </div>
-
-            </div>
-
-
-            <div class="copyright">
-                © 2026 ONE. Todos los derechos reservados.
-            </div>
-
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<!-- =========================
-     WHATSAPP FLOTANTE
-========================== -->
-
-<a
-    href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Contactar por WhatsApp"
->
-
-    <svg
-        viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
+    <a
+        href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar a ONE por WhatsApp"
+        title="Contactar por WhatsApp"
     >
 
-        <path d="M19.11 17.21c-.27-.14-1.58-.78-1.82-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.84 1.05-.15.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.43-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.94.92-.94 2.24s.96 2.6 1.09 2.78c.14.18 1.89 2.88 4.57 4.04.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.58-.65 1.8-1.27.22-.62.22-1.15.16-1.27-.07-.11-.25-.18-.52-.31z"/>
+        <!-- Icono oficial estilo WhatsApp realizado como SVG -->
 
-        <path d="M16.03 3.2c-7.1 0-12.86 5.75-12.86 12.84 0 2.26.59 4.47 1.72 6.41L3.08 28.8l6.5-1.7a12.82 12.82 0 0 0 6.45 1.74h.01c7.09 0 12.85-5.75 12.85-12.84S23.13 3.2 16.03 3.2zm0 23.46h-.01a10.63 10.63 0 0 1-5.42-1.49l-.39-.23-3.86 1.01 1.03-3.76-.25-.39a10.63 10.63 0 1 1 8.9 4.86z"/>
+        <svg
+            class="whatsapp-icon"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+        >
 
-    </svg>
+            <path d="M19.11 17.23c-.29-.15-1.71-.84-1.97-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.43-1.69-1.6-1.98-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.55-.88-2.13-.23-.56-.47-.49-.64-.5h-.55c-.19 0-.51.07-.77.36-.26.29-1.01.99-1.01 2.41 0 1.42 1.04 2.79 1.18 2.98.15.19 2.04 3.11 4.94 4.36.69.3 1.23.48 1.65.61.69.22 1.31.19 1.8.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
 
-</a>
+            <path d="M16.03 3C8.84 3 3 8.83 3 16c0 2.29.6 4.44 1.66 6.3L3 29l6.88-1.6A12.95 12.95 0 0 0 16.03 29C23.21 29 29 23.17 29 16S23.21 3 16.03 3zm0 23.65c-2.01 0-3.98-.54-5.69-1.57l-.41-.24-4.08.95.97-3.98-.27-.41A10.89 10.89 0 1 1 16.03 26.65z"/>
+
+        </svg>
+
+    </a>
 
 
 </body>
-</html>
+
+    </html>
