@@ -1,1 +1,2354 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TV y Satélite | ONE Soluciones Tecnológicas Integrales
+    </title>
+
+    <meta
+        name="description"
+        content="Soluciones de TV, TDT, recepción satelital y sistemas de señal de ONE Soluciones Tecnológicas Integrales."
+    >
+
+    <meta
+        name="theme-color"
+        content="#080808"
+    >
+
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #080808;
+
+            color: #ffffff;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================================================
+           COLORES ONE
+        ========================================================= */
+
+        :root {
+
+            --black: #080808;
+
+            --black-soft: #0d0d0d;
+
+            --border: #242424;
+
+            --border-light: #303030;
+
+            --white: #ffffff;
+
+            --gray: #aaa;
+
+            --gray-dark: #777;
+
+            --orange: #ff6a00;
+        }
+
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(8, 8, 8, 0.96);
+
+            border-bottom:
+                1px solid #202020;
+
+            backdrop-filter:
+                blur(12px);
+        }
+
+
+
+        /* =========================================================
+           MARCA
+        ========================================================= */
+
+        .brand-area {
+
+            text-align: center;
+
+            padding:
+                28px 0 20px;
+        }
+
+
+        .brand-logo {
+
+            width:
+                300px;
+
+            height:
+                auto;
+
+            margin:
+                0 auto;
+        }
+
+
+        .brand-tagline {
+
+            margin-top:
+                13px;
+
+            color:
+                #999;
+
+            font-size:
+                12px;
+
+            letter-spacing:
+                4px;
+
+            text-transform:
+                uppercase;
+
+            font-weight:
+                400;
+        }
+
+
+
+        /* =========================================================
+           REDES SOCIALES
+        ========================================================= */
+
+        .social-links {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            gap:
+                0;
+
+            margin-top:
+                17px;
+        }
+
+
+        .social-link {
+
+            width:
+                52px;
+
+            height:
+                32px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            color:
+                #aaa;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .social-link + .social-link {
+
+            border-left:
+                1px solid #333;
+        }
+
+
+        .social-link:hover {
+
+            color:
+                var(--orange);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .social-link svg {
+
+            width:
+                21px;
+
+            height:
+                21px;
+
+            fill:
+                currentColor;
+        }
+
+
+        .social-link.tiktok svg {
+
+            width:
+                20px;
+
+            height:
+                20px;
+        }
+
+
+
+        /* =========================================================
+           NAVEGACIÓN
+        ========================================================= */
+
+        .main-nav {
+
+            border-top:
+                1px solid #181818;
+        }
+
+
+        .nav-links {
+
+            min-height:
+                48px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            gap:
+                45px;
+
+            list-style:
+                none;
+        }
+
+
+        .nav-links a {
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            height:
+                48px;
+
+            color:
+                #aaa;
+
+            font-size:
+                13px;
+
+            letter-spacing:
+                1px;
+
+            text-transform:
+                uppercase;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        .nav-links a::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                0;
+
+            right:
+                0;
+
+            bottom:
+                0;
+
+            height:
+                3px;
+
+            background:
+                var(--orange);
+
+            transform:
+                scaleX(0);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--orange);
+        }
+
+
+        .nav-links a:hover::after {
+
+            transform:
+                scaleX(1);
+        }
+
+
+
+        /* =========================================================
+           HERO DEL SERVICIO
+        ========================================================= */
+
+        .service-hero {
+
+            min-height:
+                430px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            border-bottom:
+                1px solid #181818;
+
+            background:
+
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(255, 106, 0, 0.10),
+                    transparent 25%
+                ),
+
+                #080808;
+        }
+
+
+        /*
+           Línea decorativa inspirada en señal/frecuencia.
+        */
+
+        .signal-line {
+
+            position:
+                absolute;
+
+            right:
+                5%;
+
+            top:
+                50%;
+
+            width:
+                300px;
+
+            height:
+                120px;
+
+            transform:
+                translateY(-50%);
+
+            opacity:
+                0.35;
+        }
+
+
+        .signal-line span {
+
+            position:
+                absolute;
+
+            display:
+                block;
+
+            border:
+                1px solid var(--orange);
+
+            border-left:
+                0;
+
+            border-bottom:
+                0;
+
+            border-radius:
+                0 100% 0 0;
+
+            transform:
+                rotate(-45deg);
+        }
+
+
+        .signal-line span:nth-child(1) {
+
+            width:
+                70px;
+
+            height:
+                70px;
+
+            right:
+                150px;
+
+            top:
+                25px;
+        }
+
+
+        .signal-line span:nth-child(2) {
+
+            width:
+                120px;
+
+            height:
+                120px;
+
+            right:
+                95px;
+
+            top:
+                0;
+        }
+
+
+        .signal-line span:nth-child(3) {
+
+            width:
+                175px;
+
+            height:
+                175px;
+
+            right:
+                35px;
+
+            top:
+                -28px;
+        }
+
+
+        .service-hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                700px;
+
+            padding:
+                75px 0;
+        }
+
+
+        .service-number-label {
+
+            color:
+                var(--orange);
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                4px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .service-hero h1 {
+
+            font-size:
+                clamp(48px, 8vw, 82px);
+
+            line-height:
+                0.98;
+
+            letter-spacing:
+                -4px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .service-hero h1 span {
+
+            color:
+                #aaa;
+        }
+
+
+        .service-hero-text {
+
+            max-width:
+                650px;
+
+            color:
+                #aaa;
+
+            font-size:
+                18px;
+
+            line-height:
+                1.7;
+        }
+
+
+
+        /* =========================================================
+           SECCIONES
+        ========================================================= */
+
+        section {
+
+            padding:
+                80px 0;
+
+            border-top:
+                1px solid #181818;
+
+            scroll-margin-top:
+                180px;
+        }
+
+
+        .section-label {
+
+            color:
+                var(--orange);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                3px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        h2 {
+
+            font-size:
+                clamp(35px, 5vw, 55px);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -2px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .orange-dot {
+
+            color:
+                var(--orange);
+        }
+
+
+        .section-intro {
+
+            max-width:
+                720px;
+
+            color:
+                #999;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.7;
+        }
+
+
+
+        /* =========================================================
+           ÁREAS DEL SERVICIO
+        ========================================================= */
+
+        .service-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                12px;
+
+            margin-top:
+                45px;
+        }
+
+
+        .service-card {
+
+            min-height:
+                210px;
+
+            padding:
+                30px;
+
+            border:
+                1px solid #242424;
+
+            background:
+                #0b0b0b;
+
+            transition:
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .service-card:hover {
+
+            border-color:
+                var(--orange);
+
+            transform:
+                translateY(-4px);
+
+            background:
+                #0e0e0e;
+        }
+
+
+        .card-number {
+
+            color:
+                var(--orange);
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .service-card h3 {
+
+            font-size:
+                19px;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .service-card p {
+
+            color:
+                #888;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.6;
+        }
+
+
+
+        /* =========================================================
+           ÁREA PARA IMÁGENES
+        ========================================================= */
+
+        .image-section {
+
+            margin-top:
+                45px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                12px;
+        }
+
+
+        .image-placeholder {
+
+            min-height:
+                300px;
+
+            border:
+                1px dashed #3a3a3a;
+
+            background:
+                #0b0b0b;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                30px;
+
+            color:
+                #666;
+        }
+
+
+        .image-placeholder strong {
+
+            display:
+                block;
+
+            color:
+                #999;
+
+            font-size:
+                16px;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .image-placeholder span {
+
+            font-size:
+                12px;
+        }
+
+
+
+        /* =========================================================
+           INFORMACIÓN TÉCNICA
+        ========================================================= */
+
+        .technical-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                50px;
+
+            margin-top:
+                45px;
+        }
+
+
+        .technical-list {
+
+            border-top:
+                1px solid #292929;
+        }
+
+
+        .technical-item {
+
+            padding:
+                20px 0;
+
+            border-bottom:
+                1px solid #292929;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+        }
+
+
+        .technical-item strong {
+
+            font-size:
+                14px;
+        }
+
+
+        .technical-item span {
+
+            color:
+                #777;
+
+            font-size:
+                13px;
+
+            text-align:
+                right;
+        }
+
+
+
+        /* =========================================================
+           GALERÍA
+        ========================================================= */
+
+        .gallery {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                10px;
+
+            margin-top:
+                45px;
+        }
+
+
+        .gallery-item {
+
+            min-height:
+                220px;
+
+            border:
+                1px dashed #333;
+
+            background:
+                #0b0b0b;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            color:
+                #555;
+
+            font-size:
+                12px;
+        }
+
+
+
+        /* =========================================================
+           CONTACTO
+        ========================================================= */
+
+        .contact-box {
+
+            margin-top:
+                45px;
+
+            padding:
+                45px;
+
+            border:
+                1px solid #292929;
+
+            background:
+                #0b0b0b;
+        }
+
+
+        .contact-box p {
+
+            max-width:
+                650px;
+
+            color:
+                #999;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                14px;
+        }
+
+
+        .button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            min-height:
+                46px;
+
+            padding:
+                13px 26px;
+
+            border:
+                1px solid #444;
+
+            border-radius:
+                3px;
+
+            font-weight:
+                600;
+
+            font-size:
+                14px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .button.primary {
+
+            background:
+                #ffffff;
+
+            color:
+                #000000;
+
+            border-color:
+                #ffffff;
+        }
+
+
+        .button.primary:hover {
+
+            background:
+                var(--orange);
+
+            border-color:
+                var(--orange);
+
+            color:
+                #ffffff;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .button:not(.primary):hover {
+
+            border-color:
+                var(--orange);
+
+            color:
+                var(--orange);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .whatsapp-float {
+
+            position:
+                fixed;
+
+            z-index:
+                1500;
+
+            right:
+                22px;
+
+            bottom:
+                22px;
+
+            width:
+                54px;
+
+            height:
+                54px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            background:
+                #25D366;
+
+            border-radius:
+                50%;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.45);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .whatsapp-float:hover {
+
+            transform:
+                scale(1.08);
+
+            box-shadow:
+                0 10px 35px rgba(37,211,102,0.25);
+        }
+
+
+        .whatsapp-float svg {
+
+            width:
+                30px;
+
+            height:
+                30px;
+
+            fill:
+                #ffffff;
+        }
+
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            padding:
+                30px 0;
+
+            border-top:
+                1px solid #222;
+
+            color:
+                #777;
+
+            font-size:
+                11px;
+        }
+
+
+        .footer-content {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .footer-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+        }
+
+
+        .footer-logo {
+
+            width:
+                70px;
+
+            height:
+                auto;
+        }
+
+
+        .footer-tagline {
+
+            color:
+                #777;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            font-size:
+                9px;
+        }
+
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .service-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .technical-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .signal-line {
+
+                right:
+                    -100px;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            header {
+
+                position:
+                    relative;
+            }
+
+
+            .brand-area {
+
+                padding:
+                    25px 0 18px;
+            }
+
+
+            .brand-logo {
+
+                width:
+                    285px;
+
+                max-width:
+                    82%;
+            }
+
+
+            .brand-tagline {
+
+                margin-top:
+                    12px;
+
+                font-size:
+                    10px;
+
+                letter-spacing:
+                    3px;
+            }
+
+
+            .social-links {
+
+                margin-top:
+                    15px;
+            }
+
+
+            .social-link {
+
+                width:
+                    50px;
+            }
+
+
+            .main-nav {
+
+                overflow-x:
+                    auto;
+            }
+
+
+            .nav-links {
+
+                gap:
+                    27px;
+
+                min-width:
+                    max-content;
+
+                padding:
+                    0 20px;
+
+                justify-content:
+                    flex-start;
+            }
+
+
+            .nav-links a {
+
+                font-size:
+                    11px;
+            }
+
+
+            .service-hero {
+
+                min-height:
+                    auto;
+            }
+
+
+            .service-hero-content {
+
+                padding:
+                    65px 0 75px;
+            }
+
+
+            .service-hero h1 {
+
+                font-size:
+                    clamp(48px, 14vw, 70px);
+
+                letter-spacing:
+                    -3px;
+            }
+
+
+            .service-hero-text {
+
+                font-size:
+                    16px;
+            }
+
+
+            .signal-line {
+
+                opacity:
+                    0.18;
+
+                right:
+                    -210px;
+            }
+
+
+            section {
+
+                padding:
+                    65px 0;
+
+                scroll-margin-top:
+                    10px;
+            }
+
+
+            h2 {
+
+                font-size:
+                    38px;
+
+                letter-spacing:
+                    -1.5px;
+            }
+
+
+            .service-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .image-section {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .gallery {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .contact-box {
+
+                padding:
+                    30px;
+            }
+
+
+            .buttons {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .button {
+
+                width:
+                    100%;
+            }
+
+
+            .whatsapp-float {
+
+                width:
+                    54px;
+
+                height:
+                    54px;
+
+                right:
+                    18px;
+
+                bottom:
+                    18px;
+            }
+
+
+            .footer-content {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE PEQUEÑO
+        ========================================================= */
+
+        @media (max-width: 400px) {
+
+            .brand-logo {
+
+                width:
+                    265px;
+            }
+
+
+            .brand-tagline {
+
+                font-size:
+                    9px;
+
+                letter-spacing:
+                    2.5px;
+            }
+
+
+            .nav-links {
+
+                gap:
+                    22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =============================================================
+     HEADER
+============================================================= -->
+
+<header>
+
+
+    <!-- MARCA -->
+
+    <div class="brand-area">
+
+
+        <a
+            href="index.html"
+            aria-label="ONE Soluciones Tecnológicas Integrales"
+        >
+
+            <img
+                src="logo-one.png"
+                alt="ONE Soluciones Tecnológicas Integrales"
+                class="brand-logo"
+            >
+
+        </a>
+
+
+        <div class="brand-tagline">
+
+            Soluciones Tecnológicas Integrales
+
+        </div>
+
+
+
+        <!-- REDES -->
+
+        <div class="social-links">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="#"
+                class="social-link"
+                aria-label="Facebook"
+                title="Facebook"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M13.5 8H16V4.5C15.6 4.45 14.25 4.3 12.7 4.3
+                        C9.45 4.3 7.2 6.25 7.2 9.8V13H3.5V17H7.2V24H11.7V17H15.2
+                        L15.75 13H11.7V10.2C11.7 9.05 12.1 8 13.5 8Z"
+                    />
+
+                </svg>
+
+            </a>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/onetech.ia/"
+                class="social-link"
+                aria-label="Instagram"
+                title="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M7.5 2H16.5C19.54 2 22 4.46 22 7.5V16.5
+                        C22 19.54 19.54 22 16.5 22H7.5C4.46 22 2 19.54 2
+                        16.5V7.5C2 4.46 4.46 2 7.5 2ZM7.5 4C5.57 4 4 5.57
+                        4 7.5V16.5C4 18.43 5.57 20 7.5 20H16.5C18.43 20
+                        20 18.43 20 16.5V7.5C20 5.57 18.43 4 16.5 4H7.5ZM12
+                        7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17
+                        C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7ZM12
+                        9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15
+                        C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9ZM17.5
+                        5.75C18.19 5.75 18.75 6.31 18.75 7C18.75 7.69
+                        18.19 8.25 17.5 8.25C16.81 8.25 16.25 7.69
+                        16.25 7C16.25 6.31 16.81 5.75 17.5 5.75Z"
+                    />
+
+                </svg>
+
+            </a>
+
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="#"
+                class="social-link tiktok"
+                aria-label="TikTok"
+                title="TikTok"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M14.2 3H18C18.25 4.65 19.25 6.15 20.8 7
+                        C21.55 7.4 22.35 7.65 23.2 7.7V11.4C21.55 11.4
+                        19.85 10.9 18.4 10.05V16.1C18.4 20.2 15.1 23
+                        11.05 23C7.1 23 4 20.2 4 16.25C4 12.3 7.1 9.5
+                        11.05 9.5C11.4 9.5 11.75 9.55 12.1 9.6V13.4
+                        C11.75 13.3 11.4 13.25 11.05 13.25C9.2 13.25
+                        7.75 14.55 7.75 16.25C7.75 17.95 9.2 19.25
+                        11.05 19.25C12.95 19.25 14.2 17.95 14.2 16.1V3Z"
+                    />
+
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="main-nav">
+
+        <div class="container">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#nosotros">
+                        Nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#soluciones">
+                        Soluciones
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =============================================================
+     CONTENIDO
+============================================================= -->
+
+<main>
+
+
+    <!-- =========================================================
+         HERO SERVICIO 7
+    ========================================================= -->
+
+    <section class="service-hero">
+
+        <div class="container">
+
+            <div class="service-hero-content">
+
+
+                <div class="service-number-label">
+
+                    Servicio 07
+
+                </div>
+
+
+                <h1>
+
+                    TV y<br>
+
+                    <span>Satélite.</span>
+
+                </h1>
+
+
+                <p class="service-hero-text">
+
+                    Soluciones para recepción, instalación y soporte
+                    de sistemas de televisión, TDT y señal satelital.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DECORACIÓN DE SEÑAL -->
+
+        <div class="signal-line">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         INTRODUCCIÓN
+    ========================================================= -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-label">
+
+                01 · Servicio
+
+            </div>
+
+
+            <h2>
+
+                Conectando señales.<br>
+
+                <span class="orange-dot">
+                    Conectando posibilidades.
+                </span>
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                En ONE ofrecemos soluciones relacionadas con sistemas
+                de televisión y recepción de señal, desde instalaciones
+                y configuración hasta diagnóstico y soporte técnico.
+
+            </p>
+
+
+
+            <!-- ÁREAS -->
+
+            <div class="service-grid">
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Televisión digital
+                    </h3>
+
+                    <p>
+
+                        Soluciones para recepción de televisión digital
+                        terrestre y configuración de sistemas TDT.
+
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Sistemas satelitales
+                    </h3>
+
+                    <p>
+
+                        Instalación, orientación y configuración de
+                        sistemas de recepción satelital.
+
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Diagnóstico y soporte
+                    </h3>
+
+                    <p>
+
+                        Identificación de problemas de señal,
+                        configuración y funcionamiento de equipos.
+
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Antenas y recepción
+                    </h3>
+
+                    <p>
+
+                        Soluciones para mejorar la recepción y
+                        distribución de señales de televisión.
+
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Receptores
+                    </h3>
+
+                    <p>
+
+                        Configuración y soporte para receptores y
+                        equipos relacionados con televisión digital
+                        y satelital.
+
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="card-number">
+                        06
+                    </div>
+
+                    <h3>
+                        Distribución de señal
+                    </h3>
+
+                    <p>
+
+                        Soluciones para distribuir señal de televisión
+                        de manera eficiente dentro de una instalación.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         GALERÍA / IMÁGENES
+    ========================================================= -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-label">
+
+                02 · Galería
+
+            </div>
+
+
+            <h2>
+
+                Tecnología<br>
+
+                <span class="orange-dot">
+                    en acción.
+                </span>
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Esta sección está preparada para incorporar fotografías
+                de equipos, instalaciones, antenas, receptores y trabajos
+                realizados por ONE.
+
+            </p>
+
+
+            <div class="image-section">
+
+
+                <div class="image-placeholder">
+
+                    <div>
+
+                        <strong>
+                            Imagen principal
+                        </strong>
+
+                        <span>
+                            Aquí colocaremos una fotografía destacada
+                            del servicio.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-placeholder">
+
+                    <div>
+
+                        <strong>
+                            Instalación
+                        </strong>
+
+                        <span>
+                            Aquí podremos mostrar una instalación
+                            realizada por ONE.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+
+                <div class="gallery-item">
+                    Imagen 01
+                </div>
+
+
+                <div class="gallery-item">
+                    Imagen 02
+                </div>
+
+
+                <div class="gallery-item">
+                    Imagen 03
+                </div>
+
+
+                <div class="gallery-item">
+                    Imagen 04
+                </div>
+
+
+                <div class="gallery-item">
+                    Imagen 05
+                </div>
+
+
+                <div class="gallery-item">
+                    Imagen 06
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         INFORMACIÓN TÉCNICA
+    ========================================================= -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-label">
+
+                03 · Información
+
+            </div>
+
+
+            <h2>
+
+                Soluciones<br>
+
+                <span class="orange-dot">
+                    especializadas.
+                </span>
+
+            </h2>
+
+
+            <p class="section-intro">
+
+                Esta área podrá utilizarse posteriormente para explicar
+                tecnologías, equipos compatibles, tipos de instalación,
+                recomendaciones y especificaciones técnicas.
+
+            </p>
+
+
+            <div class="technical-grid">
+
+
+                <div>
+
+                    <div class="technical-list">
+
+
+                        <div class="technical-item">
+
+                            <strong>
+                                TDT
+                            </strong>
+
+                            <span>
+                                Televisión digital terrestre
+                            </span>
+
+                        </div>
+
+
+                        <div class="technical-item">
+
+                            <strong>
+                                Satélite
+                            </strong>
+
+                            <span>
+                                Recepción de señal
+                            </span>
+
+                        </div>
+
+
+                        <div class="technical-item">
+
+                            <strong>
+                                Antenas
+                            </strong>
+
+                            <span>
+                                Recepción y orientación
+                            </span>
+
+                        </div>
+
+
+                        <div class="technical-item">
+
+                            <strong>
+                                Receptores
+                            </strong>
+
+                            <span>
+                                Configuración y soporte
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 style="margin-bottom:15px;">
+
+                        Pensado para cada instalación.
+
+                    </h3>
+
+
+                    <p
+                        style="
+                            color:#888;
+                            font-size:14px;
+                            line-height:1.7;
+                        "
+                    >
+
+                        Posteriormente podremos desarrollar esta sección
+                        con información mucho más detallada sobre los
+                        sistemas que ofrece ONE, utilizando fotografías,
+                        diagramas, fichas técnicas y ejemplos reales.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONTACTO
+    ========================================================= -->
+
+    <section id="contacto">
+
+        <div class="container">
+
+
+            <div class="section-label">
+
+                04 · Contacto
+
+            </div>
+
+
+            <h2>
+
+                ¿Necesitas una<br>
+
+                <span class="orange-dot">
+                    solución?
+                </span>
+
+            </h2>
+
+
+            <div class="contact-box">
+
+
+                <p>
+
+                    Comunícate con ONE para obtener información sobre
+                    nuestros servicios de TV, TDT y sistemas satelitales.
+
+                </p>
+
+
+                <div class="buttons">
+
+
+                    <a
+                        href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
+                        class="button primary"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        WhatsApp
+
+                    </a>
+
+
+                    <a
+                        href="mailto:onenetwork.glob@gmail.com"
+                        class="button"
+                    >
+
+                        Correo electrónico
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =============================================================
+     WHATSAPP FLOTANTE
+============================================================= -->
+
+<a
+    href="https://wa.me/50586288360?text=Hola%20me%20gustar%C3%ADa%20tener%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+    title="Contactar por WhatsApp"
+>
+
+    <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+    >
+
+        <path
+            d="M20.52 3.48A11.86 11.86 0 0 0 12.08
+            0C5.53 0 .2 5.33.2 11.88c0 2.09.55 4.13
+            1.6 5.93L.1 24l6.33-1.66a11.85 11.85
+            0 0 0 5.65 1.43h.01c6.55 0 11.88-5.33
+            11.88-11.88 0-3.17-1.23-6.15-3.45-8.41ZM12.09
+            21.74h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.76
+            .99 1-3.67-.23-.38a9.86 9.86 0 0 1-1.52-5.22C2.19
+            6.43 6.62 2 12.08 2c2.65 0 5.14 1.03 7.01
+            2.9a9.86 9.86 0 0 1 2.91 7.01c0 5.46-4.44
+            9.83-9.91 9.83Zm5.4-7.38c-.3-.15-1.78-.88-2.05-.98
+            -.27-.1-.47-.15-.67.15-.2.3-.77.98-.94
+            1.18-.17.2-.35.23-.65.08-.3-.15-1.26-.46-2.4
+            -1.47-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46
+            .13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5
+            .1-.2.05-.38-.03-.53-.08-.15-.67-1.61-.92-2.21
+            -.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.38
+            -.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09
+            c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63
+            .71.23 1.36.2 1.87.12.57-.08 1.78-.73 2.03-1.43
+            .25-.7.25-1.3.17-1.43-.08-.13-.27-.2-.57-.35Z"
+        />
+
+    </svg>
+
+</a>
+
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+
+                <img
+                    src="logo-one.png"
+                    alt="ONE"
+                    class="footer-logo"
+                >
+
+
+                <div class="footer-tagline">
+
+                    Soluciones Tecnológicas Integrales
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                © 2026 ONE. Todos los derechos reservados.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
